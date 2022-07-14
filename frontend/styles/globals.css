@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .admin_sidebar_navItem{
+    @apply text-white border-b py-4 hover:bg-teal-200 hover:text-black transition rounded-sm duration-[200] ease-out
+  }
+  .doctor-sidebar-item{
+    @apply flex items-center space-x-1 text-lg mx-auto px-2 py-2 w-4/5 hover:bg-purple-500 hover:text-white rounded-md cursor-pointer hover:scale-110 hover:shadow-md transition duration-[200] ease-out
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*login*/
+.loginFormField{
+  @apply p-1 rounded-sm;
+  border: 1px solid #dfe3e8;
+  background-color: #f6f8fc;
+  width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.loginFormField:focus {
+   border-color: #4a5568;
+   box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.25);
+ }
+
+.loginFormModelContainer{
+  text-align: right;
+}
+.loginFormModelContainer > *{
+  margin-top: 1rem;
+}
+.loginFormBackground{
+  @apply bg-blue-500 p-5 rounded-md mx-auto my-auto mt-10;
+}
+
+.loginFormSingleFieldContainer{
+  @apply flex flex-col items-center;
+}
+
+.loginFormLabel{
+  @apply text-xl font-sans;
+}
+
+.loginFormButton{
+  @apply bg-white hover:bg-gray-400 text-black py-2 px-4 rounded-md;
+}
+
+.g-recaptcha{
+  @apply text-center;
+}
+
+#snackbar{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  bottom: 30px;
+}
+
+/*Snackbar*/
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+.dialogActualContent{
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogContent{
+  @apply bg-blue-500 p-5 rounded-md mx-auto my-auto mt-10;
+  margin: 20% auto;
+  text-align: center;
+  border-radius: 10px;
+  height: fit-content;
+  min-height: 400px;
+  width: 80%;
+}
+
+.dialog{
+  justify-items: center;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+

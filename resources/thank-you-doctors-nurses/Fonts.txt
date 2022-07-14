@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Gilroy
+Author: Radomir Tinkov
+Url: https://www.fontsquirrel.com/fonts/gilroy
+
+Font: Sary Soft
+Author: Zainalabdin Mustafa
+Url: https://www.fontsquirrel.com/fonts/sary-soft
